@@ -17,6 +17,7 @@
 	<form action="add.jsp" method="post">
 
 	<table border="1" width="500">
+	
 		<tr>
 			<td>이름</td><td><input type="text" name="name"></td>
 			<td>비밀번호</td><td><input type="password" name="pwd"></td>
@@ -44,7 +45,7 @@
 			<td><a href="deleteform.jsp?no=<%=vo.getNo() %>">삭제</a></td>
 		</tr>
 		<tr>
-			<td colspan="4"><%=vo.getMessage() %></td>
+			<td colspan="4"><%=vo.getMessage().replace("\n", "<br>") %></td>
 		</tr>
 	</table>
 	
